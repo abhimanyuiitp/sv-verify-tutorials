@@ -1,5 +1,5 @@
 ---
-title: Verilog Refresh
+title: "Verilog Refresh"
 layout: single
 permalink: /lessons/verilog-refresh/
 ---
