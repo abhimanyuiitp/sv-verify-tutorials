@@ -1,3 +1,9 @@
+---
+title: "Verilog Refresh"
+layout: single
+permalink: /lessons/verilog-refresh/
+---
+
 # Verilog Refresh
 
 This lesson covers the basics of SystemVerilog for verification.
@@ -20,6 +26,7 @@ endmodule
 ## always_comb vs always_ff
 
 ### always_comb
+
 Used for combinational logic:
 
 ```systemverilog
@@ -29,6 +36,7 @@ end
 ```
 
 ### always_ff
+
 Used for sequential (flip-flop) logic:
 
 ```systemverilog
@@ -49,7 +57,7 @@ end
 
 ```systemverilog
 typedef enum logic [1:0] {
-  IDLE  = 2'b00,
+  IDLE = 2'b00,
   STATE1 = 2'b01,
   STATE2 = 2'b10
 } state_t;
@@ -97,7 +105,7 @@ endmodule
 
 ## Summary
 
-- Use `always_comb` for combinational logic with blocking assignments (=)
-- Use `always_ff` for sequential logic with non-blocking assignments (<=)
+- Use always_comb for combinational logic with blocking assignments (=)
+- Use always_ff for sequential logic with non-blocking assignments (<=)
 - FSMs are commonly used in digital design
 - A 1-bit register is the simplest sequential element
