@@ -1,0 +1,6 @@
+# Main navigation
+main:
+  - title: "Lessons"
+    url: /lessons/
+  - title: "Labs"
+    url: /labs/
