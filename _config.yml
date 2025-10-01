@@ -19,6 +19,15 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/abhimanyuiitp"
 
+# Collections
+collections:
+  lessons:
+    output: true
+    permalink: /:collection/:name/
+  labs:
+    output: true
+    permalink: /:collection/:name/
+
 # Build settings
 markdown: kramdown
 permalink: /:categories/:title/
@@ -45,3 +54,28 @@ defaults:
       comments: true
       share: true
       related: true
+  - scope:
+      path: ""
+      type: lessons
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      sidebar:
+        nav: "lessons"
+  - scope:
+      path: ""
+      type: labs
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      sidebar:
+        nav: "labs"
+
+# Navigation
+main:
+  - title: "Lessons"
+    url: /lessons/
+  - title: "Labs"
+    url: /labs/
