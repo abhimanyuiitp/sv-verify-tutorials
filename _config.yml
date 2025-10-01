@@ -28,6 +28,8 @@ collections:
     output: true
     permalink: /:collection/:name/
 
+collections_dir: content
+
 # Build settings
 markdown: kramdown
 permalink: /:categories/:title/
@@ -72,10 +74,3 @@ defaults:
       read_time: true
       sidebar:
         nav: "labs"
-
-# Navigation
-main:
-  - title: "Lessons"
-    url: /lessons/
-  - title: "Labs"
-    url: /labs/
