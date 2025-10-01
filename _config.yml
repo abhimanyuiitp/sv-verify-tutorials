@@ -1,1 +1,47 @@
-theme: jekyll-theme-minimal
+# Minimal Mistakes Jekyll Theme Configuration
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+
+# Site Settings
+title: "SV Verify Tutorials"
+email: ""
+description: "SystemVerilog Verification Tutorials"
+baseurl: "/sv-verify-tutorials"
+url: "https://abhimanyuiitp.github.io"
+
+# Site Author
+author:
+  name: "abhimanyuiitp"
+  avatar: ""
+  bio: ""
+  location: ""
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/abhimanyuiitp"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
