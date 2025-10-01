@@ -1,0 +1,18 @@
+# Verible lint configuration for sv-verify-tutorials
+
+# Line length limit
+--lint_rule=line-length
+--line_length=100
+
+# Naming conventions
+--lint_rule=module-filename
+--lint_rule=parameter-name-style
+--lint_rule=signal-name-style
+
+# Disable specific rules (examples)
+# Uncomment to disable specific linting rules
+# --nowarn=line-length
+# --nowarn=module-filename
+
+# Enable all default rules
+--default-rules
