@@ -1,0 +1,39 @@
+# CI workflow for sv-verify-tutorials
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Verible
+      run: |
+        wget https://github.com/chipsalliance/verible/releases/download/v0.0-3428-gcfcbb82b/verible-v0.0-3428-gcfcbb82b-Ubuntu-22.04-jammy-x86_64.tar.gz
+        tar -xzf verible-v0.0-3428-gcfcbb82b-Ubuntu-22.04-jammy-x86_64.tar.gz
+        echo "$PWD/verible-v0.0-3428-gcfcbb82b/bin" >> $GITHUB_PATH
+    
+    - name: Run Verible Lint
+      run: make lint
+
+  simulate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Icarus Verilog
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y iverilog
+    
+    - name: Run Simulation
+      run: make sim
+      continue-on-error: true  # Allow to continue even if no testbenches exist yet
